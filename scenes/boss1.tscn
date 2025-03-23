@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://ol47hu6am6m6"]
+
+[ext_resource type="Script" uid="uid://cb6iqv4q14vj8" path="res://scripts/boss1.gd" id="1_hdl6e"]
+[ext_resource type="PackedScene" uid="uid://bx7xcm2n7pmqt" path="res://assets/characters/fbx/Skeleton_Warrior.fbx" id="2_htbmh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dq38d"]
+size = Vector3(0, 0.026, 0.277285)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_3j1st"]
+height = 0.879761
+radius = 0.272949
+
+[node name="boss1" type="CharacterBody3D"]
+script = ExtResource("1_hdl6e")
+
+[node name="Skeleton_Warrior" parent="." instance=ExtResource("2_htbmh")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0010702, 0.00967208, -0.0771348)
+shape = SubResource("BoxShape3D_dq38d")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.634583, 0)
+shape = SubResource("CylinderShape3D_3j1st")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

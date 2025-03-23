@@ -1,11 +1,13 @@
-[gd_scene load_steps=31 format=3 uid="uid://bgu7jngue5ijv"]
+[gd_scene load_steps=33 format=3 uid="uid://bgu7jngue5ijv"]
 
 [ext_resource type="Script" uid="uid://bxvos303uh5xs" path="res://scripts/main.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://b47o2ngvu0p32" path="res://scenes/killer.tscn" id="2_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://bhqjgpdg3i7oh" path="res://scenes/edwin.tscn" id="2_sugp2"]
+[ext_resource type="PackedScene" uid="uid://ol47hu6am6m6" path="res://scenes/boss1.tscn" id="3_dp3eg"]
 [ext_resource type="Texture2D" uid="uid://b47ecrcvbnvbp" path="res://assets/texture/Concrete - Pavement w Leaves_Height.tga" id="3_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://dbba53dr1xnrg" path="res://assets/desert/FBX/cactus01.fbx" id="3_muem4"]
 [ext_resource type="PackedScene" uid="uid://c8oblovmn6jud" path="res://scenes/arrow.tscn" id="3_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://b84cl52hdmu53" path="res://scenes/barrel.tscn" id="4_0ld40"]
 [ext_resource type="PackedScene" uid="uid://bm0f4646u1x5w" path="res://assets/desert/FBX/cactus02.fbx" id="4_dp3eg"]
 [ext_resource type="PackedScene" uid="uid://8xqaw31423mc" path="res://assets/desert/FBX/cactus03.fbx" id="5_0ld40"]
 [ext_resource type="PackedScene" uid="uid://bg2suiu83iolk" path="res://assets/desert/FBX/rock01.fbx" id="6_gqmmt"]
@@ -63,6 +65,8 @@ sky = SubResource("Sky_sugp2")
 [node name="Main" type="Node"]
 script = ExtResource("1_sugp2")
 killer = ExtResource("2_0wfyh")
+boss1 = ExtResource("3_dp3eg")
+barrel = ExtResource("4_0ld40")
 
 [node name="Terra" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -19.5154, 0)
@@ -151,5 +155,15 @@ environment = SubResource("Environment_jyhfs")
 wait_time = 0.1
 autostart = true
 
+[node name="Boss1_spawn" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="Barrel_spawn" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
 [connection signal="timeout" from="Edwin/Timer" to="Edwin" method="_on_timer_timeout"]
 [connection signal="timeout" from="Killer_spawn" to="." method="_on_killer_spawn_timeout"]
+[connection signal="timeout" from="Boss1_spawn" to="." method="_on_boss_1_spawn_timeout"]
+[connection signal="timeout" from="Barrel_spawn" to="." method="_on_barrel_spawn_timeout"]
