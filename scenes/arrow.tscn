@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8oblovmn6jud"]
+
+[ext_resource type="Script" uid="uid://00qk5eg2164n" path="res://scripts/arrow.gd" id="1_23jat"]
+[ext_resource type="PackedScene" uid="uid://djcvmg7m1omc8" path="res://assets/skeleton/fbx/Skeleton_Arrow.fbx" id="1_umosx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q8ifc"]
+size = Vector3(0.0434265, 0.0422058, 0.758667)
+
+[node name="arrow" type="CharacterBody3D"]
+script = ExtResource("1_23jat")
+
+[node name="Skeleton_Arrow" parent="." instance=ExtResource("1_umosx")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.00193382, -0.00224099, -0.000778198)
+shape = SubResource("BoxShape3D_q8ifc")

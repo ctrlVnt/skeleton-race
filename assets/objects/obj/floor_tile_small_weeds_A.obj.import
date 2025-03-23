@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cbw2mlmo1kawv"
+path="res://.godot/imported/floor_tile_small_weeds_A.obj-8c6a545ce7574e4bdcb5bdd47c84701e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/floor_tile_small_weeds_A.obj-8c6a545ce7574e4bdcb5bdd47c84701e.mesh"]
+
+source_file="res://assets/objects/obj/floor_tile_small_weeds_A.obj"
+dest_files=["res://.godot/imported/floor_tile_small_weeds_A.obj-8c6a545ce7574e4bdcb5bdd47c84701e.mesh", "res://.godot/imported/floor_tile_small_weeds_A.obj-8c6a545ce7574e4bdcb5bdd47c84701e.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

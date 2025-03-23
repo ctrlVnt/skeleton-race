@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://bhqjgpdg3i7oh"]
+
+[ext_resource type="Script" uid="uid://2ih5pkofve2f" path="res://scripts/edwin.gd" id="1_u8cdg"]
+[ext_resource type="PackedScene" uid="uid://dyjgf5yxctcsk" path="res://assets/characters/gltf/Skeleton_Rogue.glb" id="1_ypeuj"]
+[ext_resource type="PackedScene" uid="uid://dsmtb2dd86tkp" path="res://assets/skeleton/fbx/Skeleton_Crossbow.fbx" id="3_ot461"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u8cdg"]
+size = Vector3(0.463363, 0.103454, 0.287399)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ot461"]
+size = Vector3(0.324097, 0.0756836, 0.399445)
+
+[node name="Edwin" type="CharacterBody3D"]
+script = ExtResource("1_u8cdg")
+
+[node name="Skeleton_Rogue" parent="." instance=ExtResource("1_ypeuj")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Skeleton_Crossbow" parent="." instance=ExtResource("3_ot461")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.0254223, 0.490491, 0.164941)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00525665, 0.0317651, 0.0477371)
+shape = SubResource("BoxShape3D_u8cdg")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00604248, 0.070747, 0.483143)
+shape = SubResource("BoxShape3D_ot461")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

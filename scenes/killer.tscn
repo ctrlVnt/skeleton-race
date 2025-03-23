@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://b47o2ngvu0p32"]
+
+[ext_resource type="Script" uid="uid://bnfyd5quk2e5u" path="res://scripts/killer.gd" id="1_4tmj0"]
+[ext_resource type="PackedScene" uid="uid://du5yi7wso1crc" path="res://assets/characters/gltf/Skeleton_Minion.glb" id="1_jc8e8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4tmj0"]
+size = Vector3(0, 0.026, 0.277285)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_4tmj0"]
+height = 0.879761
+radius = 0.162109
+
+[node name="killer" type="CharacterBody3D"]
+script = ExtResource("1_4tmj0")
+
+[node name="Skeleton_Minion" parent="." instance=ExtResource("1_jc8e8")]
+transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0010702, 0.00967208, -0.0771348)
+shape = SubResource("BoxShape3D_4tmj0")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.634583, 0)
+shape = SubResource("CylinderShape3D_4tmj0")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://8nmuin3by6d2"
+path="res://.godot/imported/chest_gold.obj-77e76a0811a86ef34861fd0c85ff3882.mesh"
+
+[deps]
+
+files=["res://.godot/imported/chest_gold.obj-77e76a0811a86ef34861fd0c85ff3882.mesh"]
+
+source_file="res://assets/objects/obj/chest_gold.obj"
+dest_files=["res://.godot/imported/chest_gold.obj-77e76a0811a86ef34861fd0c85ff3882.mesh", "res://.godot/imported/chest_gold.obj-77e76a0811a86ef34861fd0c85ff3882.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

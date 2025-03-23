@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bpxrpshmx86mi"
+path="res://.godot/imported/table_medium_tablecloth.obj-b3fd3fe090a7bc5caceb9accc1a696cb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/table_medium_tablecloth.obj-b3fd3fe090a7bc5caceb9accc1a696cb.mesh"]
+
+source_file="res://assets/objects/obj/table_medium_tablecloth.obj"
+dest_files=["res://.godot/imported/table_medium_tablecloth.obj-b3fd3fe090a7bc5caceb9accc1a696cb.mesh", "res://.godot/imported/table_medium_tablecloth.obj-b3fd3fe090a7bc5caceb9accc1a696cb.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
