@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://bgu7jngue5ijv"]
+[gd_scene load_steps=34 format=3 uid="uid://bgu7jngue5ijv"]
 
 [ext_resource type="Script" uid="uid://bxvos303uh5xs" path="res://scripts/main.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://b47o2ngvu0p32" path="res://scenes/killer.tscn" id="2_0wfyh"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b84cl52hdmu53" path="res://scenes/barrel.tscn" id="4_0ld40"]
 [ext_resource type="PackedScene" uid="uid://bm0f4646u1x5w" path="res://assets/desert/FBX/cactus02.fbx" id="4_dp3eg"]
 [ext_resource type="PackedScene" uid="uid://8xqaw31423mc" path="res://assets/desert/FBX/cactus03.fbx" id="5_0ld40"]
+[ext_resource type="PackedScene" uid="uid://bt7msd1u2v1s8" path="res://scenes/wall.tscn" id="5_gqmmt"]
 [ext_resource type="PackedScene" uid="uid://bg2suiu83iolk" path="res://assets/desert/FBX/rock01.fbx" id="6_gqmmt"]
 [ext_resource type="PackedScene" uid="uid://bq2jukaeqqhh2" path="res://assets/desert/FBX/rock02.fbx" id="7_yc10j"]
 [ext_resource type="PackedScene" uid="uid://pyy2ywxjxkcs" path="res://assets/desert/FBX/rock03.fbx" id="8_jscy8"]
@@ -67,6 +68,7 @@ script = ExtResource("1_sugp2")
 killer = ExtResource("2_0wfyh")
 boss1 = ExtResource("3_dp3eg")
 barrel = ExtResource("4_0ld40")
+wall = ExtResource("5_gqmmt")
 
 [node name="Terra" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -19.5154, 0)
@@ -163,7 +165,12 @@ autostart = true
 wait_time = 10.0
 autostart = true
 
+[node name="Wall_spawn" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
 [connection signal="timeout" from="Edwin/Timer" to="Edwin" method="_on_timer_timeout"]
 [connection signal="timeout" from="Killer_spawn" to="." method="_on_killer_spawn_timeout"]
 [connection signal="timeout" from="Boss1_spawn" to="." method="_on_boss_1_spawn_timeout"]
 [connection signal="timeout" from="Barrel_spawn" to="." method="_on_barrel_spawn_timeout"]
+[connection signal="timeout" from="Wall_spawn" to="." method="_on_wall_spawn_timeout"]

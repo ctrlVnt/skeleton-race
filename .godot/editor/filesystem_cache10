@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1742767972
+::res://::1742848506
 icon.svg::CompressedTexture2D/CompressedTexture2D::7440771886029992329::1742766872::1742766915::1::::<><><>0<>0<>718614b9dc1367cf53618e553bfcf477<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile/TextFile::-1::1742766871::0::1::::<><><>0<>0<><>::
 ::res://assets/::1742767352
@@ -306,15 +306,18 @@ Concrete - Pavement w Leaves_Metallic.tga::CompressedTexture2D/CompressedTexture
 Concrete - Pavement w Leaves_Normal.tga::CompressedTexture2D/CompressedTexture2D::8704041250849106736::1742766871::1742766915::1::::<><><>0<>0<>e8b52e4eaf833c48e9bc4617a60c6952<>res://.godot/imported/Concrete - Pavement w Leaves_Normal.tga-ee474b3cd654173e7c36c0a06ead5e64.s3tc.ctex::
 Concrete - Pavement w Leaves_Occlusion.tga::CompressedTexture2D/CompressedTexture2D::4981045360597120227::1742766872::1742766915::1::::<><><>0<>0<>d3bb667d64b318097d84479ef6b39052<>res://.godot/imported/Concrete - Pavement w Leaves_Occlusion.tga-86c2706391dadd8a62c956071c826ed3.s3tc.ctex::
 skeleton_texture.png::CompressedTexture2D/CompressedTexture2D::1479613321664126767::1742766872::1742766915::1::::<><><>0<>0<>5c5008db9228dd75b9e931cdc31a2c1f<>res://.godot/imported/skeleton_texture.png-9f667d02bf9b8357c0601f7c9185ee4a.s3tc.ctex::
-::res://scenes/::1742767061
+::res://scenes/::1742833517
 arrow.tscn::PackedScene/PackedScene::7118055625055449687::1742766872::0::1::::<><><>0<>0<><>::uid://00qk5eg2164n::::res://scripts/arrow.gd<>uid://djcvmg7m1omc8::::res://assets/skeleton/fbx/Skeleton_Arrow.fbx
-barrel.tscn::PackedScene/PackedScene::4762662174067166360::1742766872::0::1::::<><><>0<>0<><>::uid://dp0uyb3l11hp2::::res://assets/objects/fbx/barrel_large.fbx
+barrel.tscn::PackedScene/PackedScene::4762662174067166360::1742771900::0::1::::<><><>0<>0<><>::uid://5a3gc0g8awi6::::res://scripts/barrel.gd<>uid://dp0uyb3l11hp2::::res://assets/objects/fbx/barrel_large.fbx
+boss1.tscn::PackedScene/PackedScene::1007170304390840435::1742769133::0::1::::<><><>0<>0<><>::uid://cb6iqv4q14vj8::::res://scripts/boss1.gd<>uid://bx7xcm2n7pmqt::::res://assets/characters/fbx/Skeleton_Warrior.fbx
 edwin.tscn::PackedScene/PackedScene::2911330593717658979::1742766872::0::1::::<><><>0<>0<><>::uid://2ih5pkofve2f::::res://scripts/edwin.gd<>uid://dyjgf5yxctcsk::::res://assets/characters/gltf/Skeleton_Rogue.glb<>uid://dsmtb2dd86tkp::::res://assets/skeleton/fbx/Skeleton_Crossbow.fbx
 killer.tscn::PackedScene/PackedScene::4488856184714365623::1742766872::0::1::::<><><>0<>0<><>::uid://bnfyd5quk2e5u::::res://scripts/killer.gd<>uid://du5yi7wso1crc::::res://assets/characters/gltf/Skeleton_Minion.glb
-main.tscn::PackedScene::2850801009503782679::1742767061::0::1::::<><><>0<>0<><>::uid://bxvos303uh5xs::::res://scripts/main.gd<>uid://b47o2ngvu0p32::::res://scenes/killer.tscn<>uid://bhqjgpdg3i7oh::::res://scenes/edwin.tscn<>uid://b47ecrcvbnvbp::::res://assets/texture/Concrete - Pavement w Leaves_Height.tga<>uid://dbba53dr1xnrg::::res://assets/desert/FBX/cactus01.fbx<>uid://c8oblovmn6jud::::res://scenes/arrow.tscn<>uid://bm0f4646u1x5w::::res://assets/desert/FBX/cactus02.fbx<>uid://8xqaw31423mc::::res://assets/desert/FBX/cactus03.fbx<>uid://bg2suiu83iolk::::res://assets/desert/FBX/rock01.fbx<>uid://bq2jukaeqqhh2::::res://assets/desert/FBX/rock02.fbx<>uid://pyy2ywxjxkcs::::res://assets/desert/FBX/rock03.fbx<>uid://cm002ss7me75r::::res://assets/desert/FBX/rock04.fbx<>uid://41kdlthyv3vv::::res://assets/desert/FBX/rock05.fbx<>uid://0p5l14hj168i::::res://assets/desert/FBX/rock06.fbx<>uid://dps7rqp1neupb::::res://assets/desert/FBX/rock07.fbx<>uid://crvdgpqod74tg::::res://assets/desert/FBX/rock08.fbx<>uid://d10okxbsh2evq::::res://assets/desert/FBX/aloe.fbx
+main.tscn::PackedScene::2850801009503782679::1742833517::0::1::::<><><>0<>0<><>::uid://bxvos303uh5xs::::res://scripts/main.gd<>uid://b47o2ngvu0p32::::res://scenes/killer.tscn<>uid://bhqjgpdg3i7oh::::res://scenes/edwin.tscn<>uid://ol47hu6am6m6::::res://scenes/boss1.tscn<>uid://b47ecrcvbnvbp::::res://assets/texture/Concrete - Pavement w Leaves_Height.tga<>uid://dbba53dr1xnrg::::res://assets/desert/FBX/cactus01.fbx<>uid://c8oblovmn6jud::::res://scenes/arrow.tscn<>uid://b84cl52hdmu53::::res://scenes/barrel.tscn<>uid://bm0f4646u1x5w::::res://assets/desert/FBX/cactus02.fbx<>uid://8xqaw31423mc::::res://assets/desert/FBX/cactus03.fbx<>uid://bg2suiu83iolk::::res://assets/desert/FBX/rock01.fbx<>uid://bq2jukaeqqhh2::::res://assets/desert/FBX/rock02.fbx<>uid://pyy2ywxjxkcs::::res://assets/desert/FBX/rock03.fbx<>uid://cm002ss7me75r::::res://assets/desert/FBX/rock04.fbx<>uid://41kdlthyv3vv::::res://assets/desert/FBX/rock05.fbx<>uid://0p5l14hj168i::::res://assets/desert/FBX/rock06.fbx<>uid://dps7rqp1neupb::::res://assets/desert/FBX/rock07.fbx<>uid://crvdgpqod74tg::::res://assets/desert/FBX/rock08.fbx<>uid://d10okxbsh2evq::::res://assets/desert/FBX/aloe.fbx
 wall.tscn::PackedScene/PackedScene::3786829747829725765::1742766872::0::1::::<><><>0<>0<><>::uid://c41iu78m46bro::::res://assets/objects/fbx/wall_archedwindow_open.fbx
-::res://scripts/::1742766872
+::res://scripts/::1742772219
 arrow.gd::GDScript/GDScript::1807321446815090723::1742766872::0::1::::<>CharacterBody3D<><>0<>0<><>::
+barrel.gd::GDScript/GDScript::2107376243685409943::1742771499::0::1::::<>CharacterBody3D<><>0<>0<><>::
+boss1.gd::GDScript/GDScript::4907541378597254639::1742769041::0::1::::<>CharacterBody3D<><>0<>0<><>::
 edwin.gd::GDScript/GDScript::1912093196967769571::1742766872::0::1::::<>CharacterBody3D<><>0<>0<><>::
 killer.gd::GDScript/GDScript::3310661706306444440::1742766872::0::1::::<>CharacterBody3D<><>0<>0<><>::
-main.gd::GDScript/GDScript::4044999712965263440::1742766872::0::1::::<>Node<><>0<>0<><>::
+main.gd::GDScript/GDScript::4044999712965263440::1742772219::0::1::::<>Node<><>0<>0<><>::

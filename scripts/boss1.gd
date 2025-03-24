@@ -34,15 +34,15 @@ func _on_area_3d_body_entered(body):
 	if shots_remaining > 0:
 		return
 		
-	is_dead = true  # Blocca il movimento
-	speed = 0  # Impedisce altri movimenti
-	velocity = Vector3.ZERO  # Ferma la velocità
-	set_physics_process(false)  # Disattiva il movimento fisico
+	is_dead = true 
+	speed = 0 
+	velocity = Vector3.ZERO 
+	set_physics_process(false) 
 
 	$Skeleton_Warrior/AnimationPlayer.stop()
 	$Skeleton_Warrior/AnimationPlayer.play("Death_A")
 
-	await $Skeleton_Warrior/AnimationPlayer.animation_finished  # Aspetta che l'animazione finisca
+	await $Skeleton_Warrior/AnimationPlayer.animation_finished
 	
 	$Area3D/CollisionShape3D.disabled = true
 	await get_tree().create_timer(3.0).timeout

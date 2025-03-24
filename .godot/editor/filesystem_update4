@@ -1,6 +1,6 @@
-res://scripts/boss1.gd
-res://scripts/main.gd
 res://scenes/main.tscn
-res://scenes/boss1.tscn
+res://scripts/main.gd
+res://scenes/wall.tscn
+res://scripts/wall.gd
 res://scenes/barrel.tscn
-res://scripts/barrel.gd
+res://scripts/boss1.gd
