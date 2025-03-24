@@ -2,7 +2,7 @@
 
 Welcome to my first game, built with [Godot](https://godotengine.org/)
 
-It's a casual survival arcade experience, inspired by games like Last War, but without the village management. Perfect for a quick, relaxing break—ideal for a 'toilet game' session! 😉
+It's a casual survival arcade experience, inspired by games like Last War, but without the village management. Perfect for a quick, relaxing break-ideal for a 'toilet game' session! 😉
 
 ## How to test
 
