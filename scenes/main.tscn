@@ -158,15 +158,15 @@ wait_time = 0.1
 autostart = true
 
 [node name="Boss1_spawn" type="Timer" parent="."]
-wait_time = 3.0
-autostart = true
-
-[node name="Barrel_spawn" type="Timer" parent="."]
 wait_time = 10.0
 autostart = true
 
+[node name="Barrel_spawn" type="Timer" parent="."]
+wait_time = 15.0
+autostart = true
+
 [node name="Wall_spawn" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 20.0
 autostart = true
 
 [connection signal="timeout" from="Edwin/Timer" to="Edwin" method="_on_timer_timeout"]
