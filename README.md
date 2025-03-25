@@ -16,7 +16,7 @@ It's a casual survival arcade experience, inspired by games like Last War, but w
 Contributions are welcome! 
 If you find any bugs, have suggestions, or want to add new features, please feel free to open an issue or submit a pull request.
 
-A huge thank you to the people who freely provided the assets used in this project!
+A huge thank you to the people who freely provided the assets used in this project, in particular [Kay Lousberg](https://kaylousberg.itch.io)
 
 ## Demo
 
