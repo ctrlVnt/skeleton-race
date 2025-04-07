@@ -5,6 +5,7 @@ var hit_points = 0
 
 func _ready():
 	$Label3D.text = str(hit_points)
+	#To do: Add hit_points random, the range might be increase with the time
 	return
 
 func _physics_process(delta: float) -> void:
@@ -23,3 +24,7 @@ func _on_area_3d_body_entered(body):
 
 	hit_points += 1
 	$Label3D.text = str(hit_points)
+	
+	# To do:
+	# When wall touch Edwin add or remove Edwin == hit_points
+	# If hit_points > n° Edwin -> Game over

@@ -9,6 +9,7 @@ var is_dead = false
 
 func _ready():
 	$Label3D.text = str(hit_points)
+	# To do: Assign a weapon 
 	return
 
 func _physics_process(delta: float) -> void:
@@ -33,8 +34,12 @@ func _on_area_3d_body_entered(body):
 
 	if hit_points <= 0:
 		is_dead = true
-		# Esegui l'animazione di morte o altre azioni necessarie
 		$Label3D.text = "0"
 
-		await get_tree().create_timer(2.0).timeout
+		await get_tree().create_timer(2.0).timeout #temporary, to delete after
+		
+		# To do:
+		# Add animation explosion or similar
+		# give a new weapon
+		
 		queue_free()
