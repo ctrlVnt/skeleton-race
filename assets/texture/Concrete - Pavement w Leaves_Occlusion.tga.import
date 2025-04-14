@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cc74dbj1s1j7p"
 path.s3tc="res://.godot/imported/Concrete - Pavement w Leaves_Occlusion.tga-86c2706391dadd8a62c956071c826ed3.s3tc.ctex"
+path.etc2="res://.godot/imported/Concrete - Pavement w Leaves_Occlusion.tga-86c2706391dadd8a62c956071c826ed3.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/texture/Concrete - Pavement w Leaves_Occlusion.tga"
-dest_files=["res://.godot/imported/Concrete - Pavement w Leaves_Occlusion.tga-86c2706391dadd8a62c956071c826ed3.s3tc.ctex"]
+dest_files=["res://.godot/imported/Concrete - Pavement w Leaves_Occlusion.tga-86c2706391dadd8a62c956071c826ed3.s3tc.ctex", "res://.godot/imported/Concrete - Pavement w Leaves_Occlusion.tga-86c2706391dadd8a62c956071c826ed3.etc2.ctex"]
 
 [params]
 

@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwcj7gs381wlg"
 path.s3tc="res://.godot/imported/rock08_0.png-455fc0570e1d8f7e9a3ed9c15031ea04.s3tc.ctex"
+path.etc2="res://.godot/imported/rock08_0.png-455fc0570e1d8f7e9a3ed9c15031ea04.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/desert/FBX/rock08_0.png"
-dest_files=["res://.godot/imported/rock08_0.png-455fc0570e1d8f7e9a3ed9c15031ea04.s3tc.ctex"]
+dest_files=["res://.godot/imported/rock08_0.png-455fc0570e1d8f7e9a3ed9c15031ea04.s3tc.ctex", "res://.godot/imported/rock08_0.png-455fc0570e1d8f7e9a3ed9c15031ea04.etc2.ctex"]
 
 [params]
 

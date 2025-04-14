@@ -4,18 +4,22 @@
 [ext_resource type="PackedScene" uid="uid://c41iu78m46bro" path="res://assets/objects/fbx/wall_archedwindow_open.fbx" id="1_wykyb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wykyb"]
-size = Vector3(0.510223, 0.105469, 0.277)
+size = Vector3(3.75896, 0.105469, 0.277)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2ktk7"]
 size = Vector3(3.97333, 1.38062, 1.36926)
 
-[node name="wall" type="CharacterBody3D"]
+[node name="wall" type="CharacterBody3D" groups=["walls"]]
 script = ExtResource("1_2ktk7")
 
 [node name="wall_archedwindow_open" parent="." instance=ExtResource("1_wykyb")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0115838, 0.0526408, -0.0771348)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00554043, 0.0526408, -0.0771348)
+shape = SubResource("BoxShape3D_wykyb")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00554043, 0.0526408, -0.0771348)
 shape = SubResource("BoxShape3D_wykyb")
 
 [node name="Area3D" type="Area3D" parent="."]

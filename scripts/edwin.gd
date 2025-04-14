@@ -5,6 +5,7 @@ const SPEED = 3.0
 const JUMP_VELOCITY = 4.5
 
 @export var arrow : PackedScene
+@export var edwin : PackedScene
 
 func _physics_process(delta: float) -> void:
 	
@@ -30,7 +31,11 @@ func _physics_process(delta: float) -> void:
 	
 	
 func _on_area_3d_body_entered(body):
-	get_tree().reload_current_scene()
+	if body.is_in_group("Walls"):
+		var edwin_instance = edwin.instantiate()
+		get_parent().add_child(edwin_instance)
+	if body.is_in_group("Enemy"):
+		get_tree().reload_current_scene()
 
 func _on_timer_timeout() -> void:
 	var arrow_instance = arrow.instantiate()

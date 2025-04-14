@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bhqjgpdg3i7oh"]
+[gd_scene load_steps=7 format=3 uid="uid://bhqjgpdg3i7oh"]
 
 [ext_resource type="Script" uid="uid://2ih5pkofve2f" path="res://scripts/edwin.gd" id="1_u8cdg"]
 [ext_resource type="PackedScene" uid="uid://dyjgf5yxctcsk" path="res://assets/characters/gltf/Skeleton_Rogue.glb" id="1_ypeuj"]
+[ext_resource type="PackedScene" uid="uid://c8oblovmn6jud" path="res://scenes/arrow.tscn" id="2_7kdv0"]
 [ext_resource type="PackedScene" uid="uid://dsmtb2dd86tkp" path="res://assets/skeleton/fbx/Skeleton_Crossbow.fbx" id="3_ot461"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u8cdg"]
@@ -10,8 +11,10 @@ size = Vector3(0.463363, 0.103454, 0.287399)
 [sub_resource type="BoxShape3D" id="BoxShape3D_ot461"]
 size = Vector3(0.324097, 0.0756836, 0.399445)
 
-[node name="Edwin" type="CharacterBody3D"]
+[node name="Edwin" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_u8cdg")
+arrow = ExtResource("2_7kdv0")
+edwin = null
 
 [node name="Skeleton_Rogue" parent="." instance=ExtResource("1_ypeuj")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)

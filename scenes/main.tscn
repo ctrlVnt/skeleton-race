@@ -1,45 +1,16 @@
-[gd_scene load_steps=34 format=3 uid="uid://bgu7jngue5ijv"]
+[gd_scene load_steps=16 format=3 uid="uid://bgu7jngue5ijv"]
 
 [ext_resource type="Script" uid="uid://bxvos303uh5xs" path="res://scripts/main.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://b47o2ngvu0p32" path="res://scenes/killer.tscn" id="2_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://bhqjgpdg3i7oh" path="res://scenes/edwin.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://ol47hu6am6m6" path="res://scenes/boss1.tscn" id="3_dp3eg"]
-[ext_resource type="Texture2D" uid="uid://b47ecrcvbnvbp" path="res://assets/texture/Concrete - Pavement w Leaves_Height.tga" id="3_jyhfs"]
-[ext_resource type="PackedScene" uid="uid://dbba53dr1xnrg" path="res://assets/desert/FBX/cactus01.fbx" id="3_muem4"]
-[ext_resource type="PackedScene" uid="uid://c8oblovmn6jud" path="res://scenes/arrow.tscn" id="3_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://b84cl52hdmu53" path="res://scenes/barrel.tscn" id="4_0ld40"]
-[ext_resource type="PackedScene" uid="uid://bm0f4646u1x5w" path="res://assets/desert/FBX/cactus02.fbx" id="4_dp3eg"]
-[ext_resource type="PackedScene" uid="uid://8xqaw31423mc" path="res://assets/desert/FBX/cactus03.fbx" id="5_0ld40"]
 [ext_resource type="PackedScene" uid="uid://bt7msd1u2v1s8" path="res://scenes/wall.tscn" id="5_gqmmt"]
-[ext_resource type="PackedScene" uid="uid://bg2suiu83iolk" path="res://assets/desert/FBX/rock01.fbx" id="6_gqmmt"]
-[ext_resource type="PackedScene" uid="uid://bq2jukaeqqhh2" path="res://assets/desert/FBX/rock02.fbx" id="7_yc10j"]
-[ext_resource type="PackedScene" uid="uid://pyy2ywxjxkcs" path="res://assets/desert/FBX/rock03.fbx" id="8_jscy8"]
-[ext_resource type="PackedScene" uid="uid://cm002ss7me75r" path="res://assets/desert/FBX/rock04.fbx" id="9_pm3ni"]
-[ext_resource type="PackedScene" uid="uid://41kdlthyv3vv" path="res://assets/desert/FBX/rock05.fbx" id="10_y6deb"]
-[ext_resource type="PackedScene" uid="uid://0p5l14hj168i" path="res://assets/desert/FBX/rock06.fbx" id="11_og1vs"]
-[ext_resource type="PackedScene" uid="uid://dps7rqp1neupb" path="res://assets/desert/FBX/rock07.fbx" id="12_2wyq8"]
-[ext_resource type="PackedScene" uid="uid://crvdgpqod74tg" path="res://assets/desert/FBX/rock08.fbx" id="13_vxglm"]
-[ext_resource type="PackedScene" uid="uid://d10okxbsh2evq" path="res://assets/desert/FBX/aloe.fbx" id="14_2f3dj"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_yq6so"]
-size = Vector3(400, 1, 400)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fv21b"]
-albedo_color = Color(0.529412, 0.384314, 0.270588, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_tel4y"]
-material = SubResource("StandardMaterial3D_fv21b")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jyhfs"]
 size = Vector3(10, 1, 200)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tbgi4"]
-albedo_texture = ExtResource("3_jyhfs")
-uv1_scale = Vector3(0.4, 0.4, 0.4)
-uv1_triplanar = true
-
 [sub_resource type="BoxMesh" id="BoxMesh_tefeu"]
-material = SubResource("StandardMaterial3D_tbgi4")
 size = Vector3(10, 1, 200)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tbgi4"]
@@ -70,53 +41,6 @@ boss1 = ExtResource("3_dp3eg")
 barrel = ExtResource("4_0ld40")
 wall = ExtResource("5_gqmmt")
 
-[node name="Terra" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -19.5154, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Terra"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 150)
-shape = SubResource("BoxShape3D_yq6so")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Terra"]
-transform = Transform3D(400, 0, 0, 0, 1, 0, 0, 0, 400, 0, 0, 151.174)
-mesh = SubResource("BoxMesh_tel4y")
-
-[node name="cactus01" parent="Terra" instance=ExtResource("3_muem4")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 27.5055, 1.93099, 29.9743)
-
-[node name="cactus02" parent="Terra" instance=ExtResource("4_dp3eg")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -28.1478, 0.582066, 42.8154)
-
-[node name="cactus03" parent="Terra" instance=ExtResource("5_0ld40")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 20.9891, 0.582066, 20.8316)
-
-[node name="rock01" parent="Terra" instance=ExtResource("6_gqmmt")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 19.8725, 0.582066, 27.8938)
-
-[node name="rock02" parent="Terra" instance=ExtResource("7_yc10j")]
-transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -25.7202, 0.582066, 95.2958)
-
-[node name="rock03" parent="Terra" instance=ExtResource("8_jscy8")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 28.2977, 0.984665, 6.81046)
-
-[node name="rock04" parent="Terra" instance=ExtResource("9_pm3ni")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 35.8576, 0.582066, 23.1118)
-
-[node name="rock05" parent="Terra" instance=ExtResource("10_y6deb")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -35.9287, 0.582066, 62.938)
-
-[node name="rock06" parent="Terra" instance=ExtResource("11_og1vs")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -26.9197, 0.589569, 18.1201)
-
-[node name="rock07" parent="Terra" instance=ExtResource("12_2wyq8")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 32.4155, 0.582066, 90.5748)
-
-[node name="rock08" parent="Terra" instance=ExtResource("13_vxglm")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 33.5854, 1.66999, 48.3776)
-
-[node name="aloe" parent="Terra" instance=ExtResource("14_2f3dj")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 31.9982, 0.166281, 19.0609)
-
 [node name="Background" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.612378, 0)
 
@@ -137,7 +61,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.975, 0.302, 80)
 shape = SubResource("BoxShape3D_tefeu")
 
 [node name="Edwin" parent="." instance=ExtResource("2_sugp2")]
-arrow = ExtResource("3_tbgi4")
 
 [node name="Timer" type="Timer" parent="Edwin"]
 wait_time = 0.221
@@ -163,11 +86,9 @@ autostart = true
 
 [node name="Barrel_spawn" type="Timer" parent="."]
 wait_time = 15.0
-autostart = true
 
 [node name="Wall_spawn" type="Timer" parent="."]
 wait_time = 20.0
-autostart = true
 
 [connection signal="timeout" from="Edwin/Timer" to="Edwin" method="_on_timer_timeout"]
 [connection signal="timeout" from="Killer_spawn" to="." method="_on_killer_spawn_timeout"]

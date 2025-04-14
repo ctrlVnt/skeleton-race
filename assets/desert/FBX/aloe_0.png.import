@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://db4m6a7aw4e6y"
 path.s3tc="res://.godot/imported/aloe_0.png-f67a772fb0e1c2c669c0160d7e379fd1.s3tc.ctex"
+path.etc2="res://.godot/imported/aloe_0.png-f67a772fb0e1c2c669c0160d7e379fd1.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/desert/FBX/aloe_0.png"
-dest_files=["res://.godot/imported/aloe_0.png-f67a772fb0e1c2c669c0160d7e379fd1.s3tc.ctex"]
+dest_files=["res://.godot/imported/aloe_0.png-f67a772fb0e1c2c669c0160d7e379fd1.s3tc.ctex", "res://.godot/imported/aloe_0.png-f67a772fb0e1c2c669c0160d7e379fd1.etc2.ctex"]
 
 [params]
 

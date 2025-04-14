@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpul8u03iq47q"
 path.s3tc="res://.godot/imported/cactus02_0.png-ee6e2ea89dbe5e6d1e98e9ef56073271.s3tc.ctex"
+path.etc2="res://.godot/imported/cactus02_0.png-ee6e2ea89dbe5e6d1e98e9ef56073271.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/desert/FBX/cactus02_0.png"
-dest_files=["res://.godot/imported/cactus02_0.png-ee6e2ea89dbe5e6d1e98e9ef56073271.s3tc.ctex"]
+dest_files=["res://.godot/imported/cactus02_0.png-ee6e2ea89dbe5e6d1e98e9ef56073271.s3tc.ctex", "res://.godot/imported/cactus02_0.png-ee6e2ea89dbe5e6d1e98e9ef56073271.etc2.ctex"]
 
 [params]
 
