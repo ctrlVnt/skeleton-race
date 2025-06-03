@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bgu7jngue5ijv"]
+[gd_scene load_steps=17 format=3 uid="uid://bgu7jngue5ijv"]
 
 [ext_resource type="Script" uid="uid://bxvos303uh5xs" path="res://scripts/main.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://b47o2ngvu0p32" path="res://scenes/killer.tscn" id="2_0wfyh"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ol47hu6am6m6" path="res://scenes/boss1.tscn" id="3_dp3eg"]
 [ext_resource type="PackedScene" uid="uid://b84cl52hdmu53" path="res://scenes/barrel.tscn" id="4_0ld40"]
 [ext_resource type="PackedScene" uid="uid://bt7msd1u2v1s8" path="res://scenes/wall.tscn" id="5_gqmmt"]
+[ext_resource type="AudioStream" uid="uid://bjjniclrrycsa" path="res://sounds/Metroid Dime.mp3" id="7_o6xl0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jyhfs"]
 size = Vector3(10, 1, 200)
@@ -86,9 +87,14 @@ autostart = true
 
 [node name="Barrel_spawn" type="Timer" parent="."]
 wait_time = 15.0
+autostart = true
 
 [node name="Wall_spawn" type="Timer" parent="."]
 wait_time = 20.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_o6xl0")
+autoplay = true
 
 [connection signal="timeout" from="Edwin/Timer" to="Edwin" method="_on_timer_timeout"]
 [connection signal="timeout" from="Killer_spawn" to="." method="_on_killer_spawn_timeout"]

@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 
-const SPEED = 3.0
+var SPEED = 3.0
 const JUMP_VELOCITY = 4.5
 
 @export var arrow : PackedScene
@@ -41,3 +41,33 @@ func _on_timer_timeout() -> void:
 	var arrow_instance = arrow.instantiate()
 	get_parent().add_child(arrow_instance)
 	arrow_instance.transform = global_transform
+
+func apply_powerup(powerup_type: String, duration: float = 5.0):
+	if powerup_type == "speed_boost":
+		SPEED += 2.0;
+		await get_tree().create_timer(duration).timeout
+		SPEED -= 2.0;
+
+var move_direction := 0  # -1 = sinistra, 1 = destra, 0 = fermo
+
+func _on_sx_pressed() -> void:
+	move_direction = -1
+
+func _on_dx_pressed() -> void:
+	move_direction = 1
+
+func _process(delta):
+	# Usa la variabile per muovere il personaggio
+	if move_direction != 0:
+		var direction = Vector3(move_direction, 0, 0)
+		velocity.x = direction.x * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+	move_and_slide()
+
+func _on_button_left_released():
+	move_direction = 0
+
+func _on_button_right_released():
+	move_direction = 0

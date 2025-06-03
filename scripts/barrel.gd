@@ -38,8 +38,12 @@ func _on_area_3d_body_entered(body):
 
 		await get_tree().create_timer(2.0).timeout #temporary, to delete after
 		
+		speed = 0
+		await get_tree().create_timer(0.5).timeout #temporary, to delete after
+		
 		# To do:
 		# Add animation explosion or similar
-		# give a new weapon
+		var player = get_node("../Edwin")
+		player.apply_powerup("speed_boost", 5.0)
 		
 		queue_free()
