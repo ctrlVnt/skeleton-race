@@ -7,7 +7,8 @@ It's a casual survival arcade experience, inspired by games like Last War, but w
 ## How to test
 
 * Download [Godot](https://godotengine.org/)
-* Clone this répository
+* Clone this répository: 
+    ```git clone https://github.com/ctrlVnt/skeleton-race.git```
 * Import project and select cloned folder
 * Enjoy !
 
