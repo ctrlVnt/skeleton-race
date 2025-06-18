@@ -10,7 +10,7 @@ size = Vector3(0.0434265, 0.0422058, 0.758667)
 script = ExtResource("1_23jat")
 
 [node name="Skeleton_Arrow" parent="." instance=ExtResource("1_umosx")]
-transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.00193382, -0.00224099, -0.000778198)

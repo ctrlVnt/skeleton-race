@@ -34,3 +34,7 @@ Enemy=""
 
 renderer/rendering_method="mobile"
 textures/vram_compression/import_etc2_astc=true
+environment/ssao/quality=0
+environment/glow/upscale_mode=0
+environment/screen_space_reflection/roughness_quality=0
+environment/subsurface_scattering/subsurface_scattering_quality=0

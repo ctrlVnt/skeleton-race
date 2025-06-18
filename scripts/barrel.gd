@@ -36,10 +36,9 @@ func _on_area_3d_body_entered(body):
 		is_dead = true
 		$Label3D.text = "0"
 
-		await get_tree().create_timer(2.0).timeout #temporary, to delete after
+		#await get_tree().create_timer(2.0).timeout #temporary, to delete after
 		
-		speed = 0
-		await get_tree().create_timer(0.5).timeout #temporary, to delete after
+		#speed = 0
 		
 		# To do:
 		# Add animation explosion or similar

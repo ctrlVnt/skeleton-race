@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bgu7jngue5ijv"]
+[gd_scene load_steps=21 format=3 uid="uid://bgu7jngue5ijv"]
 
 [ext_resource type="Script" uid="uid://bxvos303uh5xs" path="res://scripts/main.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://b47o2ngvu0p32" path="res://scenes/killer.tscn" id="2_0wfyh"]
@@ -7,6 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://b84cl52hdmu53" path="res://scenes/barrel.tscn" id="4_0ld40"]
 [ext_resource type="PackedScene" uid="uid://bt7msd1u2v1s8" path="res://scenes/wall.tscn" id="5_gqmmt"]
 [ext_resource type="AudioStream" uid="uid://bjjniclrrycsa" path="res://sounds/Metroid Dime.mp3" id="7_o6xl0"]
+[ext_resource type="Texture2D" uid="uid://bh4v7hnc8ya0d" path="res://assets/buttons/controller button 55.png" id="8_ya4ey"]
+[ext_resource type="Texture2D" uid="uid://df8fdihy5dmqe" path="res://assets/buttons/controller button 5.png" id="9_eb6dy"]
+[ext_resource type="Texture2D" uid="uid://droryxu1a3rwy" path="res://assets/buttons/controller button 56.png" id="10_trceg"]
+[ext_resource type="Texture2D" uid="uid://ckpsl7vlnhfsh" path="res://assets/buttons/controller button 6.png" id="11_a8y0u"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jyhfs"]
 size = Vector3(10, 1, 200)
@@ -78,7 +82,6 @@ shadow_enabled = true
 environment = SubResource("Environment_jyhfs")
 
 [node name="Killer_spawn" type="Timer" parent="."]
-wait_time = 0.1
 autostart = true
 
 [node name="Boss1_spawn" type="Timer" parent="."]
@@ -95,6 +98,27 @@ wait_time = 20.0
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_o6xl0")
 autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Enemies killed: 0"
+
+[node name="sx" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(100, 550)
+texture_normal = ExtResource("8_ya4ey")
+texture_pressed = ExtResource("9_eb6dy")
+action = "ui_left"
+visibility_mode = 1
+
+[node name="dx" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(1000, 550)
+texture_normal = ExtResource("10_trceg")
+texture_pressed = ExtResource("11_a8y0u")
+action = "ui_right"
+visibility_mode = 1
 
 [connection signal="timeout" from="Edwin/Timer" to="Edwin" method="_on_timer_timeout"]
 [connection signal="timeout" from="Killer_spawn" to="." method="_on_killer_spawn_timeout"]

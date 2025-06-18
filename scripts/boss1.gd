@@ -31,13 +31,15 @@ func _on_area_3d_body_entered(body):
 		return
 		
 	shots_remaining -= 1
+	$Label3D.text = str(shots_remaining * 10)
 	if shots_remaining > 0:
 		return
 		
 	is_dead = true 
 	speed = 0 
 	velocity = Vector3.ZERO 
-	set_physics_process(false) 
+	set_physics_process(false)
+	get_parent().enemy_died() 
 
 	$Skeleton_Warrior/AnimationPlayer.stop()
 	$Skeleton_Warrior/AnimationPlayer.play("Death_A")

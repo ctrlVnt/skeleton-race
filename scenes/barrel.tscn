@@ -45,7 +45,7 @@ size = Vector3(1.83386, 0.108856, 0.277)
 [sub_resource type="BoxShape3D" id="BoxShape3D_n8wf6"]
 size = Vector3(1.89117, 1.38062, 1.36926)
 
-[node name="barrel" type="CharacterBody3D"]
+[node name="barrel" type="CharacterBody3D" groups=["Enemy"]]
 script = ExtResource("1_ptqd7")
 
 [node name="barrel_large" parent="." instance=ExtResource("1_q36op")]

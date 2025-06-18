@@ -32,6 +32,7 @@ func _on_area_3d_body_entered(body):
 	speed = 0  # Impedisce altri movimenti
 	velocity = Vector3.ZERO  # Ferma la velocità
 	set_physics_process(false)  # Disattiva il movimento fisico
+	get_parent().enemy_died()
 
 	$Skeleton_Minion/AnimationPlayer.stop()
 	$Skeleton_Minion/AnimationPlayer.play("Death_A")
@@ -40,4 +41,5 @@ func _on_area_3d_body_entered(body):
 	
 	$Area3D/CollisionShape3D.disabled = true
 	await get_tree().create_timer(3.0).timeout
+	
 	queue_free()

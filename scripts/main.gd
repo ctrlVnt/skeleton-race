@@ -5,6 +5,8 @@ extends Node
 @export var barrel : PackedScene
 @export var wall : PackedScene
 
+@onready var counter_label := $CanvasLayer/Label
+
 var enemies_killed: int = 0
 
 func _on_killer_spawn_timeout() -> void:
@@ -61,3 +63,14 @@ func _on_wall_spawn_timeout() -> void:
 		right_wall_instance.position = Vector3(4.3, 0, 30)
 		right_wall_instance.rotation_degrees = Vector3(0, 180, 0)
 		add_child(right_wall_instance)
+		
+func enemy_died():
+	enemies_killed += 1
+	counter_label.text = "Enemies killed: %d" % enemies_killed
+	update_spawn_timers()
+	
+func update_spawn_timers():
+	var new_killer_time = 1.0 - enemies_killed * 0.5
+	var new_boss_time = 10.0 - enemies_killed * 0.1
+
+	$Killer_spawn.wait_time = new_killer_time
