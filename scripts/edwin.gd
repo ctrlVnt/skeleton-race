@@ -20,7 +20,7 @@ func _physics_process(delta: float) -> void:
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.y = 0
-		if direction.x > 0:
+		if velocity.x > 0:
 			$Skeleton_Rogue/AnimationPlayer.play("Running_Strafe_Left")
 		else:
 			$Skeleton_Rogue/AnimationPlayer.play("Running_Strafe_Right")
@@ -48,13 +48,13 @@ func apply_powerup(powerup_type: String, duration: float = 5.0):
 		await get_tree().create_timer(duration).timeout
 		SPEED -= 2.0;
 
-var move_direction := 0  # -1 = sinistra, 1 = destra, 0 = fermo
+var move_direction := 0.0  # -1 = sinistra, 1 = destra, 0 = fermo
 
 func _on_sx_pressed() -> void:
-	move_direction = -1
+	move_direction = -1.0
 
 func _on_dx_pressed() -> void:
-	move_direction = 1
+	move_direction = 1.0
 
 func _process(delta):
 	# Usa la variabile per muovere il personaggio
@@ -67,7 +67,11 @@ func _process(delta):
 	move_and_slide()
 
 func _on_button_left_released():
-	move_direction = 0
+	move_direction = 0.0
 
 func _on_button_right_released():
-	move_direction = 0
+	move_direction = 0.0
+
+
+func _on_h_scroll_bar_value_changed(value: float) -> void:
+	move_direction = -value

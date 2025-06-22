@@ -7,10 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://b84cl52hdmu53" path="res://scenes/barrel.tscn" id="4_0ld40"]
 [ext_resource type="PackedScene" uid="uid://bt7msd1u2v1s8" path="res://scenes/wall.tscn" id="5_gqmmt"]
 [ext_resource type="AudioStream" uid="uid://bjjniclrrycsa" path="res://sounds/Metroid Dime.mp3" id="7_o6xl0"]
-[ext_resource type="Texture2D" uid="uid://bh4v7hnc8ya0d" path="res://assets/buttons/controller button 55.png" id="8_ya4ey"]
-[ext_resource type="Texture2D" uid="uid://df8fdihy5dmqe" path="res://assets/buttons/controller button 5.png" id="9_eb6dy"]
-[ext_resource type="Texture2D" uid="uid://droryxu1a3rwy" path="res://assets/buttons/controller button 56.png" id="10_trceg"]
-[ext_resource type="Texture2D" uid="uid://ckpsl7vlnhfsh" path="res://assets/buttons/controller button 6.png" id="11_a8y0u"]
+[ext_resource type="Texture2D" uid="uid://bh4v7hnc8ya0d" path="res://assets/buttons/controller button 55.png" id="8_85g3d"]
+[ext_resource type="Texture2D" uid="uid://df8fdihy5dmqe" path="res://assets/buttons/controller button 5.png" id="9_choun"]
+[ext_resource type="Texture2D" uid="uid://droryxu1a3rwy" path="res://assets/buttons/controller button 56.png" id="10_ya4ey"]
+[ext_resource type="Texture2D" uid="uid://ckpsl7vlnhfsh" path="res://assets/buttons/controller button 6.png" id="11_eb6dy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jyhfs"]
 size = Vector3(10, 1, 200)
@@ -68,11 +68,10 @@ shape = SubResource("BoxShape3D_tefeu")
 [node name="Edwin" parent="." instance=ExtResource("2_sugp2")]
 
 [node name="Timer" type="Timer" parent="Edwin"]
-wait_time = 0.221
 autostart = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-1, 6.69698e-08, -5.61943e-08, 0, 0.642788, 0.766045, 8.74228e-08, 0.766045, -0.642788, 0, 8, -2)
+transform = Transform3D(-1, -6.69697e-08, 5.61943e-08, 0, 0.642788, 0.766044, -8.74228e-08, 0.766044, -0.642788, 0, 15, -6)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.173648, 0.984808, 0, -0.984808, -0.173648, 0, 0, 0)
@@ -107,21 +106,52 @@ offset_bottom = 23.0
 text = "Enemies killed: 0"
 
 [node name="sx" type="TouchScreenButton" parent="CanvasLayer"]
-position = Vector2(100, 550)
-texture_normal = ExtResource("8_ya4ey")
-texture_pressed = ExtResource("9_eb6dy")
+visible = false
+position = Vector2(100, 800)
+texture_normal = ExtResource("8_85g3d")
+texture_pressed = ExtResource("9_choun")
 action = "ui_left"
 visibility_mode = 1
 
 [node name="dx" type="TouchScreenButton" parent="CanvasLayer"]
-position = Vector2(1000, 550)
-texture_normal = ExtResource("10_trceg")
-texture_pressed = ExtResource("11_a8y0u")
+visible = false
+position = Vector2(500, 800)
+texture_normal = ExtResource("10_ya4ey")
+texture_pressed = ExtResource("11_eb6dy")
 action = "ui_right"
 visibility_mode = 1
+
+[node name="Mute" type="Button" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -49.0
+offset_bottom = 31.0
+grow_horizontal = 0
+toggle_mode = true
+text = "Mute"
+
+[node name="HScrollBar" type="HScrollBar" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -60.0
+offset_top = -124.0
+offset_right = 20.0
+offset_bottom = -116.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.5, 1.5)
+min_value = -1.0
+max_value = 1.0
+step = 0.1
 
 [connection signal="timeout" from="Edwin/Timer" to="Edwin" method="_on_timer_timeout"]
 [connection signal="timeout" from="Killer_spawn" to="." method="_on_killer_spawn_timeout"]
 [connection signal="timeout" from="Boss1_spawn" to="." method="_on_boss_1_spawn_timeout"]
 [connection signal="timeout" from="Barrel_spawn" to="." method="_on_barrel_spawn_timeout"]
 [connection signal="timeout" from="Wall_spawn" to="." method="_on_wall_spawn_timeout"]
+[connection signal="pressed" from="CanvasLayer/Mute" to="." method="_on_mute_pressed"]
+[connection signal="value_changed" from="CanvasLayer/HScrollBar" to="Edwin" method="_on_h_scroll_bar_value_changed"]
