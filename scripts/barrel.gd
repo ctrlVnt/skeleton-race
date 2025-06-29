@@ -43,6 +43,11 @@ func _on_area_3d_body_entered(body):
 		# To do:
 		# Add animation explosion or similar
 		var player = get_node("../Edwin")
-		player.apply_powerup("speed_boost", 5.0)
+		var powers = ["speed_boost", "mitra"]
+		var random_power_index = randi() % powers.size()
+		var chosen_power = powers[random_power_index]
+		
+		# apply power for 5 seconds
+		player.apply_powerup(chosen_power, 5.0)
 		
 		queue_free()

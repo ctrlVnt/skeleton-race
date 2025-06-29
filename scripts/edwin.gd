@@ -2,7 +2,6 @@ extends CharacterBody3D
 
 
 var SPEED = 3.0
-const JUMP_VELOCITY = 4.5
 
 @export var arrow : PackedScene
 @export var edwin : PackedScene
@@ -37,7 +36,7 @@ func _on_area_3d_body_entered(body):
 	if body.is_in_group("Enemy"):
 		get_tree().reload_current_scene()
 
-func _on_timer_timeout() -> void:
+func _on_arrow_timeout() -> void:
 	var arrow_instance = arrow.instantiate()
 	get_parent().add_child(arrow_instance)
 	arrow_instance.transform = global_transform
@@ -47,6 +46,11 @@ func apply_powerup(powerup_type: String, duration: float = 5.0):
 		SPEED += 2.0;
 		await get_tree().create_timer(duration).timeout
 		SPEED -= 2.0;
+	
+	if powerup_type == "mitra":
+		$Arrow.wait_time = 0.12
+		await get_tree().create_timer(duration).timeout
+		$Arrow.wait_time = 1
 
 var move_direction := 0.0  # -1 = sinistra, 1 = destra, 0 = fermo
 
@@ -61,6 +65,10 @@ func _process(delta):
 	if move_direction != 0:
 		var direction = Vector3(move_direction, 0, 0)
 		velocity.x = direction.x * SPEED
+		if velocity.x > 0:
+			$Skeleton_Rogue/AnimationPlayer.play("Running_Strafe_Left", -1, move_direction)
+		else:
+			$Skeleton_Rogue/AnimationPlayer.play("Running_Strafe_Right", -1, -move_direction)
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 

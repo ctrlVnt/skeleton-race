@@ -67,8 +67,10 @@ shape = SubResource("BoxShape3D_tefeu")
 
 [node name="Edwin" parent="." instance=ExtResource("2_sugp2")]
 
-[node name="Timer" type="Timer" parent="Edwin"]
+[node name="Arrow" type="Timer" parent="Edwin"]
 autostart = true
+
+[node name="Arrow3" type="Timer" parent="Edwin"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-1, -6.69697e-08, 5.61943e-08, 0, 0.642788, 0.766044, -8.74228e-08, 0.766044, -0.642788, 0, 15, -6)
@@ -148,7 +150,7 @@ min_value = -1.0
 max_value = 1.0
 step = 0.1
 
-[connection signal="timeout" from="Edwin/Timer" to="Edwin" method="_on_timer_timeout"]
+[connection signal="timeout" from="Edwin/Arrow" to="Edwin" method="_on_arrow_timeout"]
 [connection signal="timeout" from="Killer_spawn" to="." method="_on_killer_spawn_timeout"]
 [connection signal="timeout" from="Boss1_spawn" to="." method="_on_boss_1_spawn_timeout"]
 [connection signal="timeout" from="Barrel_spawn" to="." method="_on_barrel_spawn_timeout"]
