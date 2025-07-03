@@ -72,7 +72,7 @@ func enemy_died():
 	update_spawn_timers()
 	
 func update_spawn_timers():
-	var new_killer_time = 1.0 - enemies_killed * 0.5
+	var new_killer_time = 1.5 - enemies_killed * 0.01
 	var new_boss_time = 10.0 - enemies_killed * 0.1
 
 	$Killer_spawn.wait_time = new_killer_time
