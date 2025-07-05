@@ -21,13 +21,29 @@ offset_bottom = 1920.0
 layout_mode = 2
 alignment = 1
 
+[node name="Record" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Record:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Mute" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+toggle_mode = true
+text = "Mute"
+
 [node name="Start" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 50
 text = "Start"
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 50
 text = "Quit"
 
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Mute" to="." method="_on_mute_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

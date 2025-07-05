@@ -190,21 +190,24 @@ autoplay = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 234.0
-offset_top = 39.0
-offset_right = 363.0
-offset_bottom = 62.0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 179.0
+offset_bottom = 73.0
+scale = Vector2(2, 2)
 text = "Enemies killed: 0"
 
 [node name="sx" type="TouchScreenButton" parent="CanvasLayer"]
-position = Vector2(43, 800)
+position = Vector2(184, 1643)
+scale = Vector2(2, 2)
 texture_normal = ExtResource("8_85g3d")
 texture_pressed = ExtResource("9_choun")
 action = "ui_left"
 visibility_mode = 1
 
 [node name="dx" type="TouchScreenButton" parent="CanvasLayer"]
-position = Vector2(447, 800)
+position = Vector2(768, 1643)
+scale = Vector2(2, 2)
 texture_normal = ExtResource("10_ya4ey")
 texture_pressed = ExtResource("11_eb6dy")
 action = "ui_right"
@@ -214,11 +217,12 @@ visibility_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -82.0
-offset_top = 37.0
-offset_right = -33.0
-offset_bottom = 68.0
+offset_left = -180.0
+offset_top = 50.0
+offset_right = -131.0
+offset_bottom = 81.0
 grow_horizontal = 0
+scale = Vector2(2, 2)
 toggle_mode = true
 text = "Mute"
 
