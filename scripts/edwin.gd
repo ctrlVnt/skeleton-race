@@ -34,7 +34,7 @@ func _on_area_3d_body_entered(body):
 		var edwin_instance = edwin.instantiate()
 		get_parent().add_child(edwin_instance)
 	if body.is_in_group("Enemy"):
-		get_tree().reload_current_scene()
+		get_tree().change_scene_to_file("res://scenes/main.tscn")
 
 func _on_arrow_timeout() -> void:
 	var arrow_instance = arrow.instantiate()

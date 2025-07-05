@@ -72,76 +72,84 @@ shape = SubResource("BoxShape3D_tefeu")
 [node name="crypt" parent="Background" instance=ExtResource("12_eb6dy")]
 transform = Transform3D(-5, 0, 7.54979e-07, 0, 5, 0, -7.54979e-07, 0, -5, -0.176291, -1.42676, 63.8761)
 
-[node name="floor_dirt2" parent="Background" instance=ExtResource("13_trceg")]
+[node name="skull" parent="Background" instance=ExtResource("14_a8y0u")]
+transform = Transform3D(-8.47751, 2.41497, -4.72227, -0.678018, 8.33683, 5.48066, 5.26044, 4.96641, -6.90381, 8.96208, -3.34733, 17.7642)
+
+[node name="plaque" parent="Background" instance=ExtResource("15_jkv2x")]
+transform = Transform3D(-40, -6.03983e-06, 0, 6.03983e-06, -40, 0, 0, 0, 40, -0.633, -0.869992, 33.3486)
+
+[node name="floor" type="Node3D" parent="Background"]
+
+[node name="floor_dirt2" parent="Background/floor" instance=ExtResource("13_trceg")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 2.38437, 0.512378, 2.54143)
 
-[node name="floor_dirt" parent="Background" instance=ExtResource("13_trceg")]
+[node name="floor_dirt" parent="Background/floor" instance=ExtResource("13_trceg")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -2.54002, 0.512378, 2.8051)
 
-[node name="floor_dirt3" parent="Background" instance=ExtResource("13_trceg")]
+[node name="floor_dirt3" parent="Background/floor" instance=ExtResource("13_trceg")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 2.38437, 0.512378, 7.50853)
 
-[node name="floor_dirt4" parent="Background" instance=ExtResource("13_trceg")]
+[node name="floor_dirt4" parent="Background/floor" instance=ExtResource("13_trceg")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -2.54002, 0.512378, 7.77219)
 
-[node name="floor_dirt5" parent="Background" instance=ExtResource("13_trceg")]
+[node name="floor_dirt5" parent="Background/floor" instance=ExtResource("13_trceg")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 2.38437, 0.512378, 12.2131)
 
-[node name="floor_dirt6" parent="Background" instance=ExtResource("13_trceg")]
+[node name="floor_dirt6" parent="Background/floor" instance=ExtResource("13_trceg")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -2.54002, 0.512378, 12.4768)
 
-[node name="floor_dirt7" parent="Background" instance=ExtResource("13_trceg")]
+[node name="floor_dirt7" parent="Background/floor" instance=ExtResource("13_trceg")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 2.38437, 0.512378, 16.8025)
 
-[node name="floor_dirt8" parent="Background" instance=ExtResource("13_trceg")]
+[node name="floor_dirt8" parent="Background/floor" instance=ExtResource("13_trceg")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -2.54002, 0.512378, 17.0661)
 
-[node name="floor_dirt9" parent="Background" instance=ExtResource("13_trceg")]
+[node name="floor_dirt9" parent="Background/floor" instance=ExtResource("13_trceg")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 2.38437, 0.512378, 21.5846)
 
-[node name="floor_dirt10" parent="Background" instance=ExtResource("13_trceg")]
+[node name="floor_dirt10" parent="Background/floor" instance=ExtResource("13_trceg")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -2.54002, 0.512378, 21.8483)
 
-[node name="floor_dirt11" parent="Background" instance=ExtResource("13_trceg")]
+[node name="floor_dirt11" parent="Background/floor" instance=ExtResource("13_trceg")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 2.38437, 0.512378, 26.5424)
 
-[node name="floor_dirt12" parent="Background" instance=ExtResource("13_trceg")]
+[node name="floor_dirt12" parent="Background/floor" instance=ExtResource("13_trceg")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -2.54002, 0.512378, 26.8061)
 
-[node name="floor_dirt13" parent="Background" instance=ExtResource("13_trceg")]
+[node name="floor_dirt13" parent="Background/floor" instance=ExtResource("13_trceg")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 2.38437, 0.512378, 31.3844)
 
-[node name="floor_dirt14" parent="Background" instance=ExtResource("13_trceg")]
+[node name="floor_dirt14" parent="Background/floor" instance=ExtResource("13_trceg")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -2.54002, 0.512378, 31.648)
 
-[node name="floor_dirt15" parent="Background" instance=ExtResource("13_trceg")]
+[node name="floor_dirt15" parent="Background/floor" instance=ExtResource("13_trceg")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 2.38437, 0.512378, 35.8924)
 
-[node name="floor_dirt16" parent="Background" instance=ExtResource("13_trceg")]
+[node name="floor_dirt16" parent="Background/floor" instance=ExtResource("13_trceg")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -2.54002, 0.512378, 36.1561)
 
-[node name="floor_dirt17" parent="Background" instance=ExtResource("13_trceg")]
+[node name="floor_dirt17" parent="Background/floor" instance=ExtResource("13_trceg")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 2.38437, 0.512378, 40.9676)
 
-[node name="floor_dirt18" parent="Background" instance=ExtResource("13_trceg")]
+[node name="floor_dirt18" parent="Background/floor" instance=ExtResource("13_trceg")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -2.54002, 0.512378, 41.2313)
 
-[node name="floor_dirt19" parent="Background" instance=ExtResource("13_trceg")]
+[node name="floor_dirt19" parent="Background/floor" instance=ExtResource("13_trceg")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 2.38437, 0.512378, 43.5939)
 
-[node name="floor_dirt20" parent="Background" instance=ExtResource("13_trceg")]
+[node name="floor_dirt20" parent="Background/floor" instance=ExtResource("13_trceg")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -2.54002, 0.512378, 43.8576)
 
-[node name="floor_dirt21" parent="Background" instance=ExtResource("13_trceg")]
+[node name="floor_dirt21" parent="Background/floor" instance=ExtResource("13_trceg")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 2.38437, 0.512378, -2.19945)
 
-[node name="floor_dirt22" parent="Background" instance=ExtResource("13_trceg")]
+[node name="floor_dirt22" parent="Background/floor" instance=ExtResource("13_trceg")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -2.54002, 0.512378, -1.93579)
 
-[node name="floor_dirt23" parent="Background" instance=ExtResource("13_trceg")]
+[node name="floor_dirt23" parent="Background/floor" instance=ExtResource("13_trceg")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 2.38437, 0.512378, -6.45192)
 
-[node name="floor_dirt24" parent="Background" instance=ExtResource("13_trceg")]
+[node name="floor_dirt24" parent="Background/floor" instance=ExtResource("13_trceg")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -2.54002, 0.512378, -6.18825)
 
 [node name="Edwin" parent="." instance=ExtResource("2_sugp2")]
@@ -182,21 +190,21 @@ autoplay = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 234.0
+offset_top = 39.0
+offset_right = 363.0
+offset_bottom = 62.0
 text = "Enemies killed: 0"
 
 [node name="sx" type="TouchScreenButton" parent="CanvasLayer"]
-visible = false
-position = Vector2(100, 800)
+position = Vector2(43, 800)
 texture_normal = ExtResource("8_85g3d")
 texture_pressed = ExtResource("9_choun")
 action = "ui_left"
 visibility_mode = 1
 
 [node name="dx" type="TouchScreenButton" parent="CanvasLayer"]
-visible = false
-position = Vector2(500, 800)
+position = Vector2(447, 800)
 texture_normal = ExtResource("10_ya4ey")
 texture_pressed = ExtResource("11_eb6dy")
 action = "ui_right"
@@ -206,13 +214,16 @@ visibility_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -49.0
-offset_bottom = 31.0
+offset_left = -82.0
+offset_top = 37.0
+offset_right = -33.0
+offset_bottom = 68.0
 grow_horizontal = 0
 toggle_mode = true
 text = "Mute"
 
 [node name="HScrollBar" type="HScrollBar" parent="CanvasLayer"]
+visible = false
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -228,12 +239,6 @@ scale = Vector2(1.5, 1.5)
 min_value = -1.0
 max_value = 1.0
 step = 0.1
-
-[node name="skull" parent="." instance=ExtResource("14_a8y0u")]
-transform = Transform3D(-8.47751, 2.41497, -4.72227, -0.678018, 8.33683, 5.48066, 5.26044, 4.96641, -6.90381, 8.96208, -3.95971, 17.7642)
-
-[node name="plaque" parent="." instance=ExtResource("15_jkv2x")]
-transform = Transform3D(-40, -6.03983e-06, 0, 6.03983e-06, -40, 0, 0, 0, 40, -0.633, -1.48237, 33.3486)
 
 [connection signal="timeout" from="Edwin/Arrow" to="Edwin" method="_on_arrow_timeout"]
 [connection signal="timeout" from="Killer_spawn" to="." method="_on_killer_spawn_timeout"]

@@ -9,7 +9,7 @@ extends Node
 
 var enemies_killed: int = 0
 
-var spawn_pos: int = 65
+var spawn_pos: int = 50
 
 func _on_killer_spawn_timeout() -> void:
 	var killer_instance = killer.instantiate()
