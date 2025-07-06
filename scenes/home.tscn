@@ -24,7 +24,7 @@ alignment = 1
 [node name="Record" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "Record:"
+text = "Welcome !"
 horizontal_alignment = 1
 vertical_alignment = 1
 

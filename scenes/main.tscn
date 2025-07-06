@@ -155,9 +155,8 @@ transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -2.54002, 0.512378, -6.
 [node name="Edwin" parent="." instance=ExtResource("2_sugp2")]
 
 [node name="Arrow" type="Timer" parent="Edwin"]
+wait_time = 0.8
 autostart = true
-
-[node name="Arrow3" type="Timer" parent="Edwin"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-1, -6.69697e-08, 5.61943e-08, 0, 0.642788, 0.766044, -8.74228e-08, 0.766044, -0.642788, 0, 15, -6)

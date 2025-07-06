@@ -36,11 +36,13 @@ func _on_area_3d_body_entered(body):
 	if body.is_in_group("Enemy"):
 		get_parent().save_record()
 		get_tree().change_scene_to_file("res://scenes/main.tscn")
+		
 
 func _on_arrow_timeout() -> void:
 	var arrow_instance = arrow.instantiate()
 	get_parent().add_child(arrow_instance)
 	arrow_instance.transform = global_transform
+	arrow_instance.translate(Vector3(0, 0, 0.5))
 
 func apply_powerup(powerup_type: String, duration: float = 5.0):
 	if powerup_type == "speed_boost":
