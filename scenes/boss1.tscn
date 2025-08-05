@@ -11,6 +11,7 @@ height = 0.879761
 radius = 0.411621
 
 [node name="boss1" type="CharacterBody3D" groups=["Enemy"]]
+collision_layer = 2
 script = ExtResource("1_hdl6e")
 
 [node name="Skeleton_Warrior" parent="." instance=ExtResource("2_htbmh")]

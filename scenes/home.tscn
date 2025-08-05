@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://k6n8l2145dek"]
 
-[ext_resource type="Script" uid="uid://hb5sjc60nqrv" path="res://scripts/home.gd" id="1_krot7"]
+[ext_resource type="Script" path="res://scripts/home.gd" id="1_krot7"]
 
 [node name="Home" type="Control"]
 layout_direction = 4

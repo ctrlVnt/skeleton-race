@@ -42,7 +42,7 @@ func _on_arrow_timeout() -> void:
 	var arrow_instance = arrow.instantiate()
 	get_parent().add_child(arrow_instance)
 	arrow_instance.transform = global_transform
-	arrow_instance.translate(Vector3(0, 0, 0.5))
+	arrow_instance.translate(Vector3(0, 0, 0.6))
 
 func apply_powerup(powerup_type: String, duration: float = 5.0):
 	if powerup_type == "speed_boost":

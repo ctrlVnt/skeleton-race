@@ -4,6 +4,7 @@ extends Node
 @export var boss1 : PackedScene
 @export var barrel : PackedScene
 @export var wall : PackedScene
+@export var explosion : PackedScene
 
 @onready var counter_label := $CanvasLayer/Label
 
@@ -75,6 +76,12 @@ func enemy_died():
 	enemies_killed += 1
 	counter_label.text = "Enemies killed: %d" % enemies_killed
 	update_spawn_timers()
+	
+func barrel_explosion(position: Vector3) -> void:
+	var explosion_instance = explosion.instantiate()
+	explosion_instance.position = position
+	add_child(explosion_instance)
+	explosion_instance.emitting = true
 	
 func update_spawn_timers():
 	var new_killer_time = 1.5 - enemies_killed * 0.01

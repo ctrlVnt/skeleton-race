@@ -23,6 +23,9 @@ func _physics_process(delta: float) -> void:
 	direction.y = 0 
 	velocity = direction * speed
 	move_and_slide()
+	
+	if position.z < -6:
+		queue_free()
 
 
 func _on_area_3d_body_entered(body):
@@ -35,13 +38,8 @@ func _on_area_3d_body_entered(body):
 	if hit_points <= 0:
 		is_dead = true
 		$Label3D.text = "0"
-
-		#await get_tree().create_timer(2.0).timeout #temporary, to delete after
 		
-		#speed = 0
-		
-		# To do:
-		# Add animation explosion or similar
+		get_parent().barrel_explosion(global_position)
 		var player = get_node("../Edwin")
 		var powers = ["speed_boost", "mitra"]
 		var random_power_index = randi() % powers.size()

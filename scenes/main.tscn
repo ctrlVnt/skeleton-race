@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bgu7jngue5ijv"]
+[gd_scene load_steps=21 format=3 uid="uid://bgu7jngue5ijv"]
 
 [ext_resource type="Script" uid="uid://bxvos303uh5xs" path="res://scripts/main.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://b47o2ngvu0p32" path="res://scenes/killer.tscn" id="2_0wfyh"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ol47hu6am6m6" path="res://scenes/boss1.tscn" id="3_dp3eg"]
 [ext_resource type="PackedScene" uid="uid://b84cl52hdmu53" path="res://scenes/barrel.tscn" id="4_0ld40"]
 [ext_resource type="PackedScene" uid="uid://bt7msd1u2v1s8" path="res://scenes/wall.tscn" id="5_gqmmt"]
+[ext_resource type="PackedScene" uid="uid://bisb1bw6sydeg" path="res://assets/explosion.tscn" id="6_jbj1t"]
 [ext_resource type="AudioStream" uid="uid://bjjniclrrycsa" path="res://sounds/Metroid Dime.mp3" id="7_o6xl0"]
 [ext_resource type="Texture2D" uid="uid://bh4v7hnc8ya0d" path="res://assets/buttons/controller button 55.png" id="8_85g3d"]
 [ext_resource type="Texture2D" uid="uid://df8fdihy5dmqe" path="res://assets/buttons/controller button 5.png" id="9_choun"]
@@ -28,27 +29,13 @@ size = Vector3(0.075, 0.437, 200)
 [sub_resource type="BoxShape3D" id="BoxShape3D_tefeu"]
 size = Vector3(0.191, 1, 200)
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_0wfyh"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_sugp2"]
-noise = SubResource("FastNoiseLite_0wfyh")
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0wfyh"]
-sky_cover = SubResource("NoiseTexture2D_sugp2")
-
-[sub_resource type="Sky" id="Sky_sugp2"]
-sky_material = SubResource("ProceduralSkyMaterial_0wfyh")
-
-[sub_resource type="Environment" id="Environment_jyhfs"]
-background_mode = 2
-sky = SubResource("Sky_sugp2")
-
 [node name="Main" type="Node"]
 script = ExtResource("1_sugp2")
 killer = ExtResource("2_0wfyh")
 boss1 = ExtResource("3_dp3eg")
 barrel = ExtResource("4_0ld40")
 wall = ExtResource("5_gqmmt")
+explosion = ExtResource("6_jbj1t")
 
 [node name="Background" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.612378, 0)
@@ -163,10 +150,8 @@ transform = Transform3D(-1, -6.69697e-08, 5.61943e-08, 0, 0.642788, 0.766044, -8
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.173648, 0.984808, 0, -0.984808, -0.173648, 0, 0, 0)
-shadow_enabled = true
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_jyhfs")
+light_energy = 2.0
+directional_shadow_mode = 0
 
 [node name="Killer_spawn" type="Timer" parent="."]
 autostart = true

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bisb1bw6sydeg"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_g5op2"]
+emission_shape = 3
+emission_box_extents = Vector3(5, 2, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jv8ym"]
+
+[node name="Explosion" type="GPUParticles3D"]
+emitting = false
+amount = 50
+lifetime = 2.0
+one_shot = true
+explosiveness = 0.35
+process_material = SubResource("ParticleProcessMaterial_g5op2")
+draw_pass_1 = SubResource("BoxMesh_jv8ym")

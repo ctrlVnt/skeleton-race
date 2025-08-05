@@ -46,6 +46,7 @@ size = Vector3(2.22128, 0.185165, 0.277)
 size = Vector3(1.89117, 1.38062, 1.36926)
 
 [node name="barrel" type="CharacterBody3D" groups=["Enemy"]]
+collision_layer = 2
 script = ExtResource("1_ptqd7")
 
 [node name="barrel_large" parent="." instance=ExtResource("1_q36op")]
